@@ -1,0 +1,51 @@
+<div class="top">
+  <h1>Supa Dark Notepad</h1>
+  <div class="madeby">
+    <h2>Brought to you by <span class="anut">Anut </span>
+      <a href="https://discord.gg/eED88uH">
+        <img
+          width="35px" 
+          src="https://lh3.google.com/u/0/ogw/ADGmqu_tb5kDcTE53knG0_1cxgOpRzo4errTIlI3J0ry=s32-c-mo"
+        />
+      </a>
+    </h2>
+  </div>
+</div>
+
+<hr class="separator" />
+
+<div *ngIf="this.fileChosen" class="notepad">
+  <textarea
+    [(ngModel)]="text"
+    (input)="this.saved = false"
+    rows="30" placeholder="Type stuff here...">
+  </textarea>
+  <button (click)="saveText()">Save</button>
+  <i *ngIf="!this.saved">Unsaved</i>
+  <button (click)="closeEditor()">Close editor</button>
+  <hr />
+</div>
+
+<button class="main-button" (click)="this.creatingFile=true">New file</button>
+<table width="100%" class="nav-table">
+  <col style="width: 25%" />
+  <col style="width: 75%" />
+  <thead>
+    <tr>
+      <th>File name</th>
+      <th>Preview</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="file" *ngFor="let file of this.files" (click)="this.fileClicked(file.name)">
+      <td>{{file.name}}</td>
+      <td>{{file.text.split(".")[0].slice(0, 40)}}... <button class="main-button" (click)="deleteFile(file.name)" style="float: right">Delete</button></td>
+    </tr>
+    <tr *ngIf="this.creatingFile">
+      <td><input [(ngModel)]="createdFileName" placeholder="Name of file" /></td>
+      <td><button class="main-button" (click)="this.addFile(this.createdFileName)">Create file</button><button class="main-button" (click)="this.creatingFile=false">Cancel</button></td>
+    </tr>
+  </tbody>
+</table>
+<i>Click on a file to open it</i>
+<p>Used {{this.views}} times!</p>

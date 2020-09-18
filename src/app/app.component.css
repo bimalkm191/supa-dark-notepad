@@ -1,0 +1,50 @@
+.notepad textarea, .notepad button, .main-button {
+  font-family: Lato;
+  background-color: #333344;
+  color: #bbb;
+}
+
+.notepad button {
+  font-size: 14pt;
+}
+
+.notepad textarea {
+  width: 100%;
+}
+
+.notepad i, .top h1, .top h2 {
+  margin: 3px;
+}
+
+.madeby {
+  float: right;
+}
+
+.anut {
+  font-size: 160%;
+}
+
+.top h1 {
+  float: left;
+}
+
+.madeby img {
+  border-radius: 50%;
+}
+
+.separator {
+  clear: both;
+}
+
+.nav-table th, .nav-table td {
+  border: 1px solid #aaa;
+}
+
+.nav-table {
+  border-collapse: collapse;
+}
+
+.file :hover {
+  cursor: pointer;
+  background-color: #222244;
+}

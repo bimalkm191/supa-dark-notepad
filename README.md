@@ -1,6 +1,6 @@
 # supa-dark-notepad
 
-<a href="supa-dark-notepad.stackblitz.io" target="_blank">View on StackBlitz ⚡️</a>
+<a href="http://supa-dark-notepad.stackblitz.io" target="_blank">View on StackBlitz ⚡️</a>
 
 ## What is it?
 supa-dark-notepad is a simple notepad with support for multiple files. You can also save the text stored in it for later use. It depends on cookies to save text, so make sure cookies are enabled if you want to use this. This project has been made using StackBlitz and Angular. 
